@@ -1,0 +1,16 @@
+Submission note — FL-07: Build the Agent
+
+Built a working Research Scout MVP as a standalone Python script (deviated from the FL-06 platform choice of Claude Project — Google Drive OAuth setup was blocking progress, so I pivoted to a scripted agent, one of the platform options the FL-06 brief explicitly allows).
+
+Live tool/data connections in use:
+- Real-time web search via DuckDuckGo (the `ddgs` package) — not simulated or mocked.
+- Local file save to a Research_Briefs folder, with a confirm-before-save step matching the FL-06 guardrail.
+- LLM: Groq's free llama-3.1-8b-instant API (swapped from Claude to stay free during iteration).
+
+End-to-end loop verified in the attached screen recording: enter a topic → agent searches the web live → drafts a sourced brief (takeaway, findings with sources, open questions) → asks for save confirmation → saves a uniquely named file → confirms the saved path. No mid-run hand-editing.
+
+Full build log attached (build_log.md) — covers the real issues hit along the way: an invalid API key, a deprecated search package, a bug where search results weren't reaching the model, a filename bug that silently overwrote saved briefs, and one exposed-API-key scare that got rotated immediately.
+
+Cut from scope for this checkpoint: the weekly recurring-scan comparison feature from the FL-06 spec — noted as a stretch item for the next pass.
+
+Files attached: agent.py (working prototype), build_log.md, and the raw screen recording of a successful end-to-end run.
