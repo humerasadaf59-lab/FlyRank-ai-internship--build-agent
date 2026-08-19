@@ -1,26 +1,34 @@
-# FlyRank AI Internship — Umaira Sadaf
+## Research Scout Agent — Live Demo & Documentation
 
-Deliverables for the FlyRank AI Internship, General AI Fluency track.
+### What it does:
+Research Scout is an AI-powered web research agent that takes any topic, 
+searches the web, and generates a sourced research brief in ~15 seconds.
 
-| Assignment | Description | Folder |
-|---|---|---|
-| FL-06 | Design Your Personal Agent — spec doc | [`/FL-06`](./FL-06) |
-| FL-07 | Build the Agent — working prototype (Checkpoint 1 MVP) | [`/FL-07`](./FL-07) |
+### Demo Video:
+[Watch the live demo](https://youtu.be/_BExQm-F7t8?si=SOct0XNbilHaZxkQ)
 
-## Summary
+In the video I show:
+- Running the agent with topic: "AI trends in 2026"
+- Live web search results being analyzed
+- Claude generating a structured research brief with citations
+- One design decision: Why Claude + web search tool vs. custom scraper
+- One limitation: Limited to first 10 search results
 
-The agent is a **Research Scout**: given a topic, it searches the web, drafts
-a concise sourced brief, and (with confirmation) saves it to a file. FL-06
-covers the design spec; FL-07 is the working build, with a full build log and
-a raw screen recording of a successful end-to-end run.
-# Research Scout Agent
+### Key Deliverables:
+- **README**: Full setup, usage examples, architecture, eval results
+- **Demo**: 3-min live run with narration explaining design & limitations
+- **Repository**: [FlyRank-ai-internship--build-agent](https://github.com/humerasadaf59-lab/FlyRank-ai-internship--build-agent)
 
-## What This Agent Does
+### How it was built:
+Used Claude API's tool-use capability to:
+1. Design research prompts (Claude designed the system prompt)
+2. Execute web searches with real-time results
+3. Generate structured briefs with citations
+4. Iterate and debug the agent workflow
 
-**Research Scout** is an AI-powered web research agent that automates the discovery and documentation process. Given a research topic, it:
-1. Searches the web for relevant information
-2. Collects and analyzes findings
-3. Drafts a concise, sourced brief
-4. Saves the research document automatically
+**Transparency**: "Built with Claude API's web search tool. Claude was used to design research prompts and debug the agent workflow."
 
-[... rest of README ...]
+### GitHub Repository:
+- Complete README with setup instructions
+- agent.py source code
+- Example research brief output
